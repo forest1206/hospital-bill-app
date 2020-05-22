@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/patient_input">
+    <fragment
+        android:id="@+id/patient_input"
+        android:name="com.mends4112.fragments.FragmentPatient"
+        android:label="fragment_customer_input"
+        tools:layout="@layout/fragment_patient_input">
+        <action
+            android:id="@+id/action_register_to_match"
+            app:destination="@id/service_input"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/service_input"
+        android:name="com.mends4112.fragments.FragmentService"
+        android:label="fragment_service_input"
+        tools:layout="@layout/fragment_service_input">
+        <action
+            android:id="@+id/action_register_to_match"
+            app:destination="@id/summary"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/summary"
+        android:name="com.mends4112.fragments.FragmentSummary"
+        android:label="fragment_service_input"
+        tools:layout="@layout/fragment_service_input">
+
+    </fragment>
+</navigation>
